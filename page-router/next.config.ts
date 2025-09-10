@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
 		root: __dirname,
 	},
 	images: {
-		remotePatterns: [{ protocol: 'https', hostname: 'picsum.photos', pathname: '/**' }],
+		remotePatterns: [
+			{ protocol: 'https', hostname: 'picsum.photos', pathname: '/**' },
+			{ protocol: 'https', hostname: 'fastly.picsum.photos', pathname: '/**' },
+		],
 	},
 };
 
