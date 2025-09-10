@@ -1,4 +1,5 @@
 // import { User } from '@/@types/type';
+import TopBadgeLayout from '@/layout/TopBadgeLayout';
 import fetchPhotos from '@/utils/fetchPhotos';
 // import { InferGetServerSidePropsType } from 'next';
 import { InferGetStaticPropsType } from 'next';
@@ -40,7 +41,7 @@ function Page(props: InferGetStaticPropsType<typeof getStaticProps>) {
 			<Head>
 				<title>Practice | Photos</title>
 			</Head>
-			<h1>Photos Page</h1>
+			<h2 className='sr-only'>Photos Page</h2>
 			<ul className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4'>
 				{data.map(({ id, author, download_url, width }) => (
 					<li key={id} className='mb-4'>
@@ -65,3 +66,7 @@ function Page(props: InferGetStaticPropsType<typeof getStaticProps>) {
 	);
 }
 export default Page;
+
+Page.getLayout = (page: React.ReactNode) => {
+	return <TopBadgeLayout>{page}</TopBadgeLayout>;
+};
