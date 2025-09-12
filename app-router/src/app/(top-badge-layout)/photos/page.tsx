@@ -39,6 +39,18 @@ async function Page() {
 					</li>
 				))}
 			</ul>
+			<div className='flex gap-6 w-full justify-center items-center my-6'>
+				<Link
+					href={`/photos/query_page`}
+					className='border border-blue-500 w-1/3 text-blue-500 px-auto py-1 rounded text-center'>
+					Query Page
+				</Link>
+				<Link
+					href={`/photos/suspense_page`}
+					className='bg-blue-500 w-1/3 text-white px-auto py-1 rounded text-center'>
+					Suspense Page
+				</Link>
+			</div>
 		</>
 	);
 }

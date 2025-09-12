@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ScrollSmootherProvider from '@/components/ScrollSmootherProvider';
+import ScrollSmootherProvider from '@/provider/ScrollSmootherProvider';
+import QueryProvider from '@/provider/QueryProvider';
 
 export const metadata: Metadata = {
 	title: 'Triangle App',
@@ -41,7 +42,9 @@ export default function RootLayout({
 				<ScrollSmootherProvider>
 					<div className='flex flex-col min-h-screen'>
 						<Header />
-						<main className='flex-1'>{children}</main>
+						<QueryProvider>
+							<main className='flex-1'>{children}</main>
+						</QueryProvider>
 						<Footer />
 					</div>
 				</ScrollSmootherProvider>
