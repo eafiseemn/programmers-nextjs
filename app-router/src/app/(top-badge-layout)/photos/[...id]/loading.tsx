@@ -1,11 +1,10 @@
 function Loading() {
 	return (
-		<div className='p-6'>
-			<div className='h-8 w-1/3 bg-slate-500 rounded mb-2 animate-pulse' />
+		<div className='p-3'>
+			<div className='h-8 w-1/4 bg-slate-500 rounded mb-2 animate-pulse' />
 			<div className='h-3 w-1/4 bg-slate-500 rounded mb-2 animate-pulse' />
-			<div className='h-68 w-full bg-slate-500 rounded mb-3 animate-pulse' />
-			<div className='h-4 w-1/4 bg-slate-500 rounded mb-2 animate-pulse' />
-			<div className='h-4 w-2/3 bg-slate-500 rounded animate-pulse' />
+			<div className='h-200 w-full bg-slate-500 rounded mb-3 animate-pulse' />
+			<div className='h-4 w-2/5 bg-slate-500 rounded mb-2 animate-pulse' />
 		</div>
 	);
 }
