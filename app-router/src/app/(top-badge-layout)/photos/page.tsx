@@ -1,3 +1,4 @@
+import { delay } from '@/utils/delay';
 import fetchPhotos from '@/utils/fetchPhotos';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -13,6 +14,8 @@ async function Page() {
 	const data = await fetchPhotos(12, { cache: 'force-cache' });
 
 	if (!data) notFound(); // 404 NotFound로 Fallback
+
+	await delay();
 
 	return (
 		<>

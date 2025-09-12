@@ -1,3 +1,4 @@
+import { delay } from '@/utils/delay';
 import fetchPhotoByOne from '@/utils/fetchPhotoByOne';
 import Image from 'next/image';
 // import { notFound } from 'next/navigation';
@@ -40,6 +41,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
 
 	// notFound fallback (server component에서만 사용 가능)
 	// if (!data) notFound();
+	await delay();
 
 	const { author, width, height, url, download_url } = data;
 
