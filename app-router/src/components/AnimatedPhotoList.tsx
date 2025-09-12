@@ -29,7 +29,7 @@ function AnimatedPhotoList({ data }: { data: string[] }) {
 							trigger: el,
 							start: 'top 65%',
 							toggleActions: 'play none none reverse',
-							markers: true, // scroll Start/End Point 표시
+							// markers: true, // scroll Start/End Point 표시
 						},
 					});
 				});
